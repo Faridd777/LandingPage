@@ -1,0 +1,316 @@
+/* Palet Warna */
+:root {
+    --primary-color: #000033;
+    /* Biru Tua */
+    --accent-color: #FFA500;
+    /* Oranye */
+    --secondary-color: #f0f0f0;
+    /* Abu-abu Muda */
+    --text-dark: #333;
+    --text-light: #fff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 5px 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    margin: 0;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e09500;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-content h2 {
+    font-size: 3em;
+    font-weight: 700;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin: 10px 0 30px;
+}
+
+.hero-image {
+    max-width: 500px;
+    margin-top: 40px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Accounts Section */
+.accounts-section {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    color: var(--primary-color);
+}
+
+.accounts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.account-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.account-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.account-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.specs-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    font-size: 0.9em;
+}
+
+.specs-list li {
+    margin-bottom: 5px;
+}
+
+.price {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin: 10px 0;
+}
+
+.buy-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #1a1a4d;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.vote-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.vote-icon {
+    font-size: 3em;
+    margin-right: 15px;
+}
+
+.vote-text {
+    font-size: 1.5em;
+}
+
+.testimonial-quotes p {
+    font-style: italic;
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 60px 0;
+}
+
+.faq-item {
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active::after {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-answer p {
+    margin: 0 0 20px 0;
+}
+
+/* Footer */
+.footer {
+    background-color: #222;
+    color: var(--text-light);
+    text-align: center;
+    padding: 40px 0;
+}
+
+.social-links a img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-links a img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-section .container {
+        flex-direction: column-reverse;
+    }
+
+    .hero-content {
+        margin-top: 30px;
+    }
+
+    .hero-content h2 {
+        font-size: 2em;
+    }
+
+    .accounts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Efek Fokus untuk Bagian yang Dituju */
+section:target {
+    box-shadow: 0 0 0 5px var(--accent-color),
+        /* Garis luar oranye */
+        0 0 0 10px rgba(255, 165, 0, 0.3);
+    /* Efek cahaya oranye */
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+/* Hapus efek setelah beberapa saat (opsional, menggunakan keyframes) */
+@keyframes remove-focus {
+    from {
+        box-shadow: 0 0 0 5px var(--accent-color), 0 0 0 10px rgba(255, 165, 0, 0.3);
+    }
+
+    to {
+        box-shadow: none;
+    }
+}
+
+section:not(:target) {
+    animation: remove-focus 1s forwards;
+}
